@@ -1,0 +1,161 @@
+{
+  "business": "JABA’S BURGERS",
+  "phone": "5491121709260",
+  "pickupAddress": "Salvador del Carril 777, esquina Oribe, José C. Paz",
+  "source": "https://wa.me/c/5491121709260",
+  "verifiedAt": "2026-10-17",
+  "products": [
+    {
+      "id": "chiddi-bacon-triple",
+      "name": "Chiddi Bacon Triple",
+      "price": 15000,
+      "category": "Hamburguesas",
+      "description": "Tres carnes, cheddar, extra bacon, aderezo y cebolla picada. Incluye papas.",
+      "image": "assets/chiddi-bacon-triple.jpg"
+    },
+    {
+      "id": "chiddi-bacon-simple",
+      "name": "Chiddi Bacon Simple",
+      "price": 9500,
+      "category": "Hamburguesas",
+      "description": "Carne, cheddar, extra bacon, aderezo y cebolla picada. Incluye papas.",
+      "image": "assets/chiddi-bacon-simple.jpg"
+    },
+    {
+      "id": "chiddi-simple",
+      "name": "Chiddi Simple",
+      "price": 9000,
+      "category": "Hamburguesas",
+      "description": "Una carne, tres cheddar, aderezo y cebolla picada.",
+      "image": "assets/chiddi-simple.jpg"
+    },
+    {
+      "id": "jaba-triple",
+      "name": "Jaba Triple",
+      "price": 15000,
+      "category": "Hamburguesas",
+      "description": "Carne, cheddar, salsa Jaba’s, lechuga, tomate y cebolla. Incluye papas.",
+      "image": "assets/jaba-triple.jpg"
+    },
+    {
+      "id": "chiddi-bacon-doble",
+      "name": "Chiddi Bacon Doble",
+      "price": 12500,
+      "category": "Hamburguesas",
+      "description": "Dos carnes, cheddar, extra bacon, aderezo y cebolla picada. Incluye papas.",
+      "image": "assets/chiddi-bacon-doble.jpg"
+    },
+    {
+      "id": "jaba-doble",
+      "name": "Jaba Doble",
+      "price": 12500,
+      "category": "Hamburguesas",
+      "description": "Dos carnes, cheddar, salsa Jaba’s, lechuga, tomate y cebolla picada. Incluye papas.",
+      "image": "assets/jaba-doble.jpg"
+    },
+    {
+      "id": "jaba-simple",
+      "name": "Jaba Simple",
+      "price": 9500,
+      "category": "Hamburguesas",
+      "description": "Carne, cheddar, salsa Jaba’s, lechuga, tomate y cebolla picada. Incluye papas.",
+      "image": "assets/jaba-simple.jpg"
+    },
+    {
+      "id": "chiddi-triple",
+      "name": "Chiddi Triple",
+      "price": 14500,
+      "category": "Hamburguesas",
+      "description": "Tres carnes, cheddar, aderezo y cebolla picada. Incluye papas.",
+      "image": "assets/chiddi-triple.jpg"
+    },
+    {
+      "id": "chiddi-doble",
+      "name": "Chiddi Doble",
+      "price": 12000,
+      "category": "Hamburguesas",
+      "description": "Dos carnes, cinco cheddar, aderezo y cebolla picada. Incluye papas.",
+      "image": "assets/chiddi-doble.jpg"
+    },
+    {
+      "id": "papas",
+      "name": "Papas fritas",
+      "price": 3000,
+      "category": "Acompañamientos",
+      "description": "Una porción para acompañar tu pedido.",
+      "image": "assets/papas.jpg"
+    },
+    {
+      "id": "papas-cheddar",
+      "name": "Papas con cheddar, bacon y verdeo",
+      "price": 8000,
+      "category": "Acompañamientos",
+      "description": "Bandeja de papas fritas con cheddar, bacon y verdeo.",
+      "image": "assets/papas-cheddar.jpg"
+    },
+    {
+      "id": "nuggets",
+      "name": "Nuggets ×6",
+      "price": 5000,
+      "category": "Acompañamientos",
+      "description": "Seis unidades.",
+      "image": "assets/nuggets.jpg"
+    },
+    {
+      "id": "aros",
+      "name": "Aros de cebolla ×6",
+      "price": 5000,
+      "category": "Acompañamientos",
+      "description": "Seis unidades.",
+      "image": "assets/aros.jpg"
+    },
+    {
+      "id": "combo-infantil",
+      "name": "Combo infantil",
+      "price": 12500,
+      "category": "Kids",
+      "description": "Hamburguesa simple solo queso, papas fritas, seis nuggets y jugo Baggio 200 ml.",
+      "image": "assets/combo-infantil.jpg"
+    },
+    {
+      "id": "dip-ketchup",
+      "name": "Dip de ketchup",
+      "price": 1500,
+      "category": "Dips",
+      "description": "100 g de ketchup.",
+      "image": "assets/dip-ketchup.jpg"
+    },
+    {
+      "id": "dip-mayonesa",
+      "name": "Dip de mayonesa",
+      "price": 1500,
+      "category": "Dips",
+      "description": "100 g de mayonesa.",
+      "image": "assets/dip-ketchup.jpg"
+    },
+    {
+      "id": "dip-jota",
+      "name": "Dip salsa Jota",
+      "price": 2500,
+      "category": "Dips",
+      "description": "100 g de salsa Jota.",
+      "image": "assets/dip-jota.jpg"
+    },
+    {
+      "id": "dip-cheddar",
+      "name": "Dip de cheddar",
+      "price": 2500,
+      "category": "Dips",
+      "description": "Sumá cheddar a tu pedido.",
+      "image": "assets/dip-cheddar.jpg"
+    },
+    {
+      "id": "coca",
+      "name": "Coca-Cola 354 ml",
+      "price": 2500,
+      "category": "Bebidas",
+      "description": "Lata de 354 ml.",
+      "image": "assets/coca.jpg"
+    }
+  ]
+}

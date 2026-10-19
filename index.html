@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f5f0e6">
+  <title>JABA’S BURGERS · Armá tu pedido</title>
+  <meta name="description" content="Elegí tus hamburguesas, sumá papas y armá tu pedido a JABA’S BURGERS por WhatsApp. Envío o retiro, con todo en un solo mensaje.">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"><script type="module" src="app.mjs"></script>
+</head>
+<body>
+  <a class="skip" href="#menu">Ir al menú</a>
+  <header class="header wrap">
+    <a class="brand" href="#" aria-label="JABA’S BURGERS, inicio"><span class="brand-logo"><img src="assets/brand-source.jpg" alt="Logo original de Jaba’s Burgers" width="562" height="1280"></span><span class="brand-wordmark">JABA’S<small>B U R G E R S</small></span></a>
+    <nav aria-label="Navegación principal"><a href="#menu">El menú</a><a href="#como-pedir">Cómo pedir</a></nav>
+    <button class="cart-trigger" data-open-cart aria-label="Abrir pedido"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Zm3 0V5a4 4 0 0 1 8 0v2"/></svg><span>Mi pedido</span><b data-count>0</b></button>
+  </header>
+  <main>
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy"><div class="eyebrow"><span></span> HAMBURGUESAS · JOSÉ C. PAZ</div>
+        <h1 id="hero-title">HOY PINTA<br><span>UNA JABA’S.</span></h1>
+        <p>Pan, cheddar y ese primer mordisco.<br>Elegí tu burger. Nosotros ponemos el sabor.</p>
+        <a class="button primary" href="#menu">Quiero mi burger <span aria-hidden="true">↗</span></a>
+        <div class="hero-note"><span class="mini-line"></span> Armá tu pedido acá. Confirmalo por WhatsApp.</div>
+      </div>
+      <div class="hero-visual"><div class="hero-photo"><img id="hero-image" src="assets/hero-art-v2.png" alt="Ilustración artística de una burger con cheddar y bacon, papas y aros sobre azul petróleo y naranja" fetchpriority="high"><div class="photo-fallback" id="hero-fallback" hidden>JABA’S<br><span>BURGER TIME.</span></div></div><div class="hero-stamp" aria-hidden="true">MUCHO<br><strong>CHEDDAR.</strong><br>MUCHA ONDA.</div><div class="photo-caption"><span id="hero-product">TODO EL SABOR. TODA LA ONDA.</span><a href="#menu" aria-label="Ver hamburguesas">↗</a></div><span class="hero-spark" aria-hidden="true">✳</span></div>
+    </section>
+    <div class="ticker" aria-hidden="true"><div>BURGERS CON TODA <span>✳</span> PAPAS PARA COMPARTIR <span>✳</span> EL PLAN ESTÁ ACÁ <span>✳</span> BURGERS CON TODA <span>✳</span></div></div>
+    <section class="menu-section wrap" id="menu" aria-labelledby="menu-title">
+      <div class="section-heading"><div><div class="eyebrow">01 / ELEGÍ LO QUE TE TIENTA</div><h2 id="menu-title">EL MENÚ.</h2></div><p>De la primera burger<br>al último dip.</p></div>
+      <div class="filters" id="filters" aria-label="Filtrar menú"></div>
+      <div class="product-grid" id="products" aria-live="polite"><p class="loading">Estamos preparando el menú…</p></div>
+      <p class="menu-note">Precios en pesos argentinos. Disponibilidad y costo de envío a confirmar con el local al realizar tu pedido.</p>
+    </section>
+    <section class="how-section" id="como-pedir"><div class="wrap how-inner"><div><div class="eyebrow">02 / DEL ANTOJO AL PEDIDO</div><h2>TRES PASOS.<br><span>CERO VUELTAS.</span></h2></div><ol class="steps"><li><span>01</span><div><h3>Elegí tus favoritos</h3><p>Sumá burgers, papas, dips y algo para tomar.</p></div></li><li><span>02</span><div><h3>Contanos cómo lo querés</h3><p>Completá tu nombre y elegí envío o retiro.</p></div></li><li><span>03</span><div><h3>Confirmalo por WhatsApp</h3><p>Te llevamos el mensaje armado. Envialo y coordiná con el local.</p></div></li></ol></div></section>
+    <section class="contact wrap"><div><div class="eyebrow">¿TE QUEDÓ ALGUNA DUDA?</div><h2>HABLEMOS DE BURGERS.</h2><p class="contact-details">Jueves a domingo · 19:30 a 23:00<br><span id="contact-address">José C. Paz · Buenos Aires</span></p></div><a href="https://wa.me/5491121709260" target="_blank" rel="noopener" class="button outline">Consultar por WhatsApp <span aria-hidden="true">↗</span></a></section>
+  </main>
+  <footer class="wrap"><a class="brand" href="#" aria-label="Jaba’s Burgers, inicio"><span class="brand-logo"><img src="assets/brand-source.jpg" alt="Logo original de Jaba’s Burgers" width="562" height="1280"></span><span class="brand-wordmark">JABA’S<small>B U R G E R S</small></span></a><p>José C. Paz · Buenos Aires</p><a href="https://wa.me/c/5491121709260" target="_blank" rel="noopener">Catálogo en WhatsApp ↗</a></footer>
+  <button class="mobile-cart" data-open-cart hidden><span>Ver mi pedido <b data-count>0</b></span><strong data-total>$0</strong></button>
+  <div class="toast" id="toast" role="status"></div>
+  <dialog id="cart-dialog" aria-labelledby="cart-title"><div class="drawer-head"><div><span class="eyebrow">TU PRÓXIMO BUEN PLAN</span><h2 id="cart-title">MI PEDIDO<span>.</span></h2></div><button id="close-cart" class="icon-button" aria-label="Cerrar pedido">✕</button></div>
+    <div class="drawer-body"><div id="cart-items"></div><div id="checkout-area" hidden><div class="subtotal"><span>Subtotal de productos</span><strong data-total></strong></div><p class="checkout-note">El local confirma disponibilidad, costo de envío y tiempo de preparación por WhatsApp.</p>
+      <form id="checkout-form"><label for="customer-name">Tu nombre</label><input id="customer-name" name="name" autocomplete="name" placeholder="¿A nombre de quién?" required minlength="2" maxlength="80">
+        <fieldset><legend>¿Cómo lo recibís?</legend><div class="method-options"><label><input type="radio" name="method" value="delivery" checked><span>Envío a domicilio</span></label><label><input type="radio" name="method" value="pickup"><span>Retiro en el local</span></label></div></fieldset>
+        <div id="delivery-fields"><label for="customer-address">Dirección de entrega</label><input id="customer-address" name="address" autocomplete="street-address" placeholder="Calle, número y localidad" required minlength="5" maxlength="250"><p class="field-note">Sumá piso o departamento si corresponde. Costo y zona de envío a confirmar.</p></div>
+        <div class="pickup-info" id="pickup-fields" hidden><strong>Dirección de retiro</strong><p id="pickup-address"></p></div>
+        <label for="customer-notes">¿Algo para tener en cuenta? <span class="optional">(opcional)</span></label><textarea id="customer-notes" name="notes" rows="2" maxlength="500" placeholder="Aclaraciones para el local…"></textarea>
+        <p id="form-error" class="form-error" role="alert"></p><button class="button primary submit-order" type="submit">Continuar en WhatsApp <span aria-hidden="true">↗</span></button><p class="privacy-note">Se abrirá WhatsApp con tu pedido listo para enviar. Tu pedido se confirma cuando el local te responde.</p>
+      </form></div></div></dialog>
+</body>
+</html>
+
