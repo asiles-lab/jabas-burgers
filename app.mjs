@@ -1,3 +1,4 @@
+import { track } from './analytics.mjs';
 import { calculateOrder, buildOrderMessage, orderUrl } from './order.mjs';
 const $ = selector => document.querySelector(selector);
 const money = value => new Intl.NumberFormat('es-AR', { style:'currency', currency:'ARS', maximumFractionDigits:0 }).format(value);
@@ -46,23 +47,23 @@ function changeMethod() {
 }
 document.addEventListener('click', event => {
   const open = event.target.closest('[data-open-cart]');
-  if (open) { updateCart(); changeMethod(); dialog.showModal(); return; }
+  if (open) { updateCart(); changeMethod(); dialog.showModal(); track('abrir_carrito'); return; }
   const add = event.target.closest('[data-add]');
-  if (add) { const added = changeQuantity(add.dataset.add, 1); notify(added ? 'Listo, lo sumamos a tu pedido.' : 'Máximo 30 unidades por producto.'); return; }
+  if (add) { const added = changeQuantity(add.dataset.add, 1); if (added) track('agregar_producto'); notify(added ? 'Listo, lo sumamos a tu pedido.' : 'Máximo 30 unidades por producto.'); return; }
   const category = event.target.closest('[data-filter]');
-  if (category) { filter = category.dataset.filter; renderProducts(); return; }
+  if (category) { filter = category.dataset.filter; renderProducts(); track('filtrar_menu'); return; }
   const quantity = event.target.closest('[data-change]');
-  if (quantity) { changeQuantity(quantity.dataset.change, Number(quantity.dataset.delta)); changeMethod(); return; }
+  if (quantity) { changeQuantity(quantity.dataset.change, Number(quantity.dataset.delta)); changeMethod(); track('cambiar_cantidad'); return; }
   const remove = event.target.closest('[data-remove]');
-  if (remove) { delete cart[remove.dataset.remove]; updateCart(); changeMethod(); return; }
+  if (remove) { delete cart[remove.dataset.remove]; updateCart(); changeMethod(); track('quitar_producto'); return; }
   if (event.target.closest('[data-browse]')) { dialog.close(); $('#menu').scrollIntoView({ behavior:'smooth' }); }
 });
 $('#close-cart').addEventListener('click', () => dialog.close());
 dialog.addEventListener('click', event => { if (event.target === dialog) { const box = dialog.getBoundingClientRect(); if (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) dialog.close(); } });
-$('#checkout-form').addEventListener('change', event => { if (event.target.name === 'method') changeMethod(); });
+$('#checkout-form').addEventListener('change', event => { if (event.target.name === 'method') { changeMethod(); track(event.target.value === 'pickup' ? 'elegir_retiro' : 'elegir_envio'); } });
 $('#checkout-form').addEventListener('submit', event => {
   event.preventDefault();
-  try { const details = Object.fromEntries(new FormData(event.currentTarget)); const message = buildOrderMessage(catalog, cart, details, store); const link = document.createElement('a'); link.href = orderUrl(message); link.target = '_blank'; link.rel = 'noopener'; document.body.append(link); link.click(); link.remove(); $('#form-error').textContent = ''; }
+  try { const details = Object.fromEntries(new FormData(event.currentTarget)); const message = buildOrderMessage(catalog, cart, details, store); track('continuar_whatsapp'); window.open(orderUrl(message), '_blank', 'noopener'); $('#form-error').textContent = ''; }
   catch (error) { $('#form-error').textContent = error.message; }
 });
 try {
